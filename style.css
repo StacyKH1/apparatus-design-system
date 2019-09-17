@@ -1,42 +1,71 @@
 /*========================================
+Colors
+==========================================*/
+html {
+	--color-text-black: #1F2D3D;
+	--color-text-dark-smoke: #C0CCDA;
+	--color-text-light-smoke: #E0E6ED;
+	--color-blue: #0041CB;
+	--color-dark-blue: #7A99FF
+	--color-faded-blue: #AFC9FF;
+	--color-orange: #FFC733;
+	--color-dark-orange: #C89700;
+	--color-light-orange: #FFFA68;
+}
+
+/*========================================
 Typography
 ==========================================*/
 
 html {
-  	color: #1F2D3D;
-  	font-family: "Helvetica", "Arial", sans-serif;
-  	margin: 0;
-  	padding: 0;
+	--font-primary: Helvetica, Arial, sans-serif;
+	--font-titles:'Squada One', cursive;
+	
+	font-family: var(--font-primary);
+  	color: var(--color-text-black);
+  	line-height: 1.2;
 }
 
 h1 {
+	font-family: var(--font-titles);
 	font-size: 2.2rem;
 }
 
 h2 {
-	font-size: 1.5rem;
-	padding-bottom: 0;
+	font-family: var(--font-titles);
+	font-size: 1.7rem;
 }
 
 h3 {
+	font-family: var(--font-titles);
 	font-size: 1.3rem;
-	padding-bottom: 0;
 }
 
 h4 {
+	font-family: var(--font-titles);
 	font-size: 1.2rem;
 }
 
 h5 {
+	font-family: var(--font-titles);
 	font-size: 1.1rem;
 }
 
 h6 {
+	font-family: var(--font-titles);
 	font-size: .9rem;
 }
 
 a {
-	color: #FFC733;
+	color: var(--color-orange);
+}
+
+.title-example {
+	font-family: var(--font-titles);
+}
+
+.primary-example {
+	font-family: var(--font-primary);
 }
 
 /*========================================
@@ -44,8 +73,11 @@ Site Logo
 ==========================================*/
 
 .site-logo {
+	font-family: var(--font-titles);
 	font-size: 2.8rem;
+	letter-spacing: .2rem;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 /*========================================
@@ -60,13 +92,41 @@ nav	ul {
 	padding: 0;
 }
 
+/*========================================
+Main Page Components
+==========================================*/
+
+main {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+}
+
+main a {
+	color: var(--color-text-dark-smoke);
+	text-decoration: none;
+}
+
+main a:visited {
+	color: var(--color-text-dark-smoke);
+}
+
+main a:active {	
+	color: var(--color-text-light-smoke);
+}	
+
+main a:hover, main a:focus {
+	color: var(--color-text-light-smoke);
+	text-decoration: underline;
+}
+
 
 /*========================================
 Header Component
 ==========================================*/
 
 header {
-	background-color: #0041CB;
+	background-color: var(--color-blue);
 	padding: 2rem;
 }
 
@@ -75,6 +135,6 @@ Footer Component
 ==========================================*/
 
 footer {
-	background-color: #AFC9FF;
+	background-color: var(--color-faded-blue);
 	padding: 2rem;
 }
