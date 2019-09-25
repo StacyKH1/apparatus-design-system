@@ -3,6 +3,7 @@ Colors
 ==========================================*/
 html {
 	--color-text-black: #1F2D3D;
+	--color-text-black-smoke: #494f57;
 	--color-text-dark-smoke: #C0CCDA;
 	--color-text-light-smoke: #E0E6ED;
 	--color-blue: #0041CB;
@@ -20,40 +21,66 @@ Typography
 html {
 	--font-primary: Helvetica, Arial, sans-serif;
 	--font-titles:'Squada One', cursive;
+
+	--size-one: calc( 1rem * 1.333 );
+	--size-two: calc( 1rem * 1.777 );
+	--size-three: calc( 1rem * 2.369 );
+	--size-four: calc( 1rem * 3.157 );
+	--size-five: calc( 1rem * 4.209 );
+	--size-six: calc( 1rem * 5.61 );
+	--size-minus-one: calc( 1rem * .75 );
 	
+	color: var(--color-text-black);
 	font-family: var(--font-primary);
-  	color: var(--color-text-black);
-  	line-height: 1.2;
+	font-size: 16px;
+  	line-height: 1.4;
 }
 
 h1 {
 	font-family: var(--font-titles);
-	font-size: 2.2rem;
+	font-size: var(--size-six);
+	font-weight: normal;
+	line-height: 1.1;
 }
 
 h2 {
 	font-family: var(--font-titles);
-	font-size: 1.7rem;
+	font-size: var(--size-five);
+	font-weight: normal;
+	line-height: 1.1;
 }
 
 h3 {
 	font-family: var(--font-titles);
-	font-size: 1.3rem;
+	font-size: var(--size-four);
+	font-weight: normal;
+	line-height: 1.1;
 }
 
 h4 {
 	font-family: var(--font-titles);
-	font-size: 1.2rem;
+	font-size: var(--size-three);
+	font-weight: normal;
+	line-height: 1.2;
 }
 
 h5 {
 	font-family: var(--font-titles);
-	font-size: 1.1rem;
+	font-size: var(--size-two);
+	font-weight: normal;
+	line-height: 1.2;
 }
 
 h6 {
 	font-family: var(--font-titles);
-	font-size: .9rem;
+	font-size: var(--size-one);
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: var(--color-text-dark-smoke);
+	text-decoration: underline;
 }
 
 a {
@@ -68,14 +95,24 @@ a {
 	font-family: var(--font-primary);
 }
 
+.paragraph-featured {
+	font-size: var(--size-two);
+	letter-spacing: .1em;
+	margin-right: var(--margin-featured)
+}
+
+.tertiary-copy {
+	font-size: var(--size-minus-one);
+}
+
 /*========================================
 Site Logo
 ==========================================*/
 
 .site-logo {
 	font-family: var(--font-titles);
-	font-size: 2.8rem;
-	letter-spacing: .2rem;
+	font-size: var(--size-six);
+	letter-spacing: .3rem;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -93,13 +130,15 @@ nav	ul {
 }
 
 /*========================================
-Main Page Components
+Main Page Components / Layout
 ==========================================*/
 
 main {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 800px;
+	--margin-featured: 6rem;
+	--margin-standard: 45rem;
+
+	margin: 4rem auto;
+	max-width: var(--margin-standard);
 }
 
 main a {
@@ -120,6 +159,13 @@ main a:hover, main a:focus {
 	text-decoration: underline;
 }
 
+figure {
+	color: var(--color-text-black-smoke);
+}
+
+figure p {
+	font-style: italic;
+}
 
 /*========================================
 Header Component
